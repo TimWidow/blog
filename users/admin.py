@@ -1,5 +1,10 @@
-from django.contrib import admin
+"""User admin classes."""
+
+# Django
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from django.contrib import admin
+
+# Models
 from django.contrib.auth.models import User
 from users.models import Profile
 
@@ -7,6 +12,7 @@ from users.models import Profile
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
     """Profile admin."""
+
     list_display = ('pk', 'user', 'photo')
     list_display_links = ('pk', 'user',)
     list_editable = ('photo',)
@@ -29,7 +35,7 @@ class ProfileAdmin(admin.ModelAdmin):
             'fields': (('user', 'photo', 'website'),),
         }),
         ('Extra info', {
-            'fields': ('date_modified',),
+            'fields': (('date_modified'),),
         })
     )
 

@@ -1,3 +1,6 @@
+"""Posts models."""
+
+# Django
 from django.db import models
 from django.utils.text import slugify
 from django.contrib.auth.models import User
@@ -24,6 +27,8 @@ class Post(models.Model):
 
     class Meta:
         ordering = ('title',)
+        verbose_name = "Пост"
+        verbose_name_plural = "Посты"
 
     def __str__(self):
         """Return title and username."""

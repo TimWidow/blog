@@ -14,14 +14,14 @@
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
          <div class="container">
-            <a class="navbar-brand" href="{% url 'posts:blog' %}">Простой блог</a>
+            <a class="navbar-brand" href="{% url 'posts:blog' %}">Simple Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                <ul class="navbar-nav ml-auto">
                   <li class="nav-item active">
-                     <a class="nav-link" href="{% url 'posts:blog' %}">Блог
+                     <a class="nav-link" href="{% url 'posts:blog' %}">Blog
                      <span class="sr-only">(current)</span>
                      </a>
                   </li>
@@ -32,7 +32,7 @@
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{request.user.username}}</a>
                      <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{% url 'users:logout' %}">Выйти</a>
+                        <a class="dropdown-item" href="{% url 'users:logout' %}">Logout</a>
                      </div>
                   </li>
                   {% else %}
@@ -71,10 +71,9 @@
             </div>
             <!-- Side Widget -->
             <div class="card my-4">
-               <h5 class="card-header">А знаете ли вы, что:</h5>
+               <h5 class="card-header">Side Widget</h5>
                <div class="card-body">
-                  Шампанское изобрели англичане, а вовсе не французы, как принято думать
-                  <a href="https://znaeteli.ru/2009/09/lyubitelyam-shipuchki-posvyashhaetsya/">(подробнее…).</a>
+                  You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
                </div>
             </div>
          </div>
@@ -82,8 +81,7 @@
       <!-- Footer -->
       <footer class="py-5 bg-dark">
          <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; <a href="http://127.0.0.1:8000/admin"> Simple Blog</a> {% now "Y" %}</p>
-
+            <p class="m-0 text-center text-white">Copyright &copy; Simple Blog {% now "Y" %}</p>
          </div>
          <!-- /.container -->
       </footer>
